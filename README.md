@@ -40,3 +40,9 @@ Colorized, too. Very pretty. That's all.
 If git is not installed in `/usr/bin/git` you should edit the "git_program_path" variable in git-update-all.rb
 
 This uses a built-in class to colorize terminal output, so no gems are necessary. I lifted this from [here](http://stackoverflow.com/questions/1489183/colorized-ruby-output).
+
+To install this script as a commandline program just like any other, link to it from /usr/local/bin (or wherever is in your PATH):
+
+    ln -s /path/to/git-update-all.rb /usr/local/bin/git-update-all
+
+and make sure you `chown +x /path/to/git-update-all.rb` to make sure it's executable.

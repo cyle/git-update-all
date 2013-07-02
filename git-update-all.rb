@@ -58,7 +58,7 @@ Dir.foreach(use_path) do |entry|
 			working_path = full_path
 			git_path = working_path + "/.git/";
 			# update remote(s)
-			git_remote_update_result = `#{git_program_path} --git-dir="#{git_path}" --work-tree="#{working_path}" remote update`
+			git_remote_update_result = `#{git_program_path} --git-dir="#{git_path}" --work-tree="#{working_path}" remote update &> /dev/null `
 			# get and show status
 			git_status_result = `#{git_program_path} --git-dir="#{git_path}" --work-tree="#{working_path}" status -sb`
 			puts "status for #{entry}" if use_path.eql?("./")
